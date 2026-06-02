@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50 Kata Motivasi Kehidupan</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f7fa;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#2193b0,#6dd5ed);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    margin-top:20px;
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.hero-img{
+    width:400px;
+    max-width:90%;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+.card{
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    color:#2193b0;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+    text-align:justify;
+}
+
+.card img{
+    width:100%;
+    margin-top:15px;
+    border-radius:12px;
+}
+
+footer{
+    background:#2193b0;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img class="hero-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200" alt="Motivasi">
+    <h1>50 Kata Motivasi Kehidupan</h1>
+    <p>Jangan pernah menyerah dalam meraih impian.</p>
+</header>
+
+<div class="container" id="motivasiContainer"></div>
+
+<footer>
+    © 2026 Website Motivasi | Dibuat oleh Siswa TKJ
+</footer>
+
+<script>
+
+const gambar = [
+"https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200",
+"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200",
+"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200",
+"https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200",
+"https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200"
+];
+
+const motivasi = [
+"Kesuksesan bukanlah sesuatu yang datang secara instan. Dibutuhkan kerja keras, kesabaran, disiplin, dan semangat yang tinggi untuk mencapainya. Setiap langkah kecil yang dilakukan dengan konsisten akan membawa perubahan besar di masa depan.",
+"Setiap orang memiliki kemampuan dan potensi yang berbeda. Jangan pernah merasa rendah diri ketika melihat keberhasilan orang lain. Fokuslah pada pengembangan diri sendiri dan teruslah belajar dari pengalaman.",
+"Kegagalan bukanlah akhir dari perjalanan hidup. Kegagalan adalah kesempatan untuk belajar dan memperbaiki diri. Orang-orang yang sukses saat ini juga pernah mengalami berbagai kegagalan.",
+"Gunakan waktu dengan bijak untuk belajar, bekerja, dan melakukan hal-hal positif. Waktu yang digunakan dengan baik akan membawa manfaat besar bagi masa depan.",
+"Kepercayaan diri merupakan kunci penting dalam meraih impian. Ketika seseorang percaya pada kemampuannya sendiri, ia akan lebih berani menghadapi tantangan.",
+"Disiplin adalah kebiasaan yang mampu mengubah hidup seseorang menjadi lebih baik. Dengan disiplin, pekerjaan dapat diselesaikan tepat waktu dan tujuan dapat dicapai.",
+"Jangan pernah berhenti bermimpi karena mimpi adalah sumber semangat untuk terus maju dan berkembang menjadi pribadi yang lebih baik.",
+"Setiap tantangan hidup adalah kesempatan untuk belajar dan tumbuh menjadi pribadi yang lebih kuat dan lebih bijaksana.",
+"Rasa syukur membuat hati menjadi lebih tenang dan membantu kita menikmati setiap proses kehidupan dengan lebih baik.",
+"Pendidikan adalah investasi yang tidak akan pernah merugikan. Ilmu yang diperoleh hari ini akan menjadi bekal berharga di masa depan."
+];
+
+const container = document.getElementById("motivasiContainer");
+
+for(let i=1; i<=50; i++){
+
+const card = document.createElement("div");
+card.className = "card";
+
+card.innerHTML = `
+<h2>Motivasi ${i}</h2>
+<p>${motivasi[(i-1)%motivasi.length]}</p>
+<img src="${gambar[(i-1)%gambar.length]}" alt="Motivasi ${i}">
+`;
+
+container.appendChild(card);
+}
+
+</script>
+
+</body>
+</html>
